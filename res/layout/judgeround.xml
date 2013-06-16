@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/judgeRoundScroll"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/judgeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:text="Name of Tournament"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/timerStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/timerstylestop" />
+
+            <TextView
+                android:id="@+id/judgeRoundTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/timerStop"
+                android:text="00:00"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/judgeRoundCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="Round 1/3"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/timerStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dip"
+                android:layout_toRightOf="@+id/judgeRoundTimer"
+                android:background="@drawable/timerstylestart" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="5dip"
+            android:background="#FF909090" />
+
+        <LinearLayout
+            android:id="@+id/judgeRoundLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!--
+                 <RelativeLayout android:layout_height="wrap_content" android:layout_width="fill_parent"> 
+				<TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="Player 
+				One" android:singleLine="true" android:clickable="true" android:gravity="right" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content" 
+				android:layout_toLeftOf="@+id/textView1" android:id="@+id/textView3" /> <TextView 
+				android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceMedium" 
+				android:layout_height="wrap_content" android:text="vs" android:layout_margin="5dip" 
+				android:layout_width="wrap_content" android:layout_centerVertical="true" 
+				android:layout_centerHorizontal="true" /> <TextView android:textAppearance="?android:attr/textAppearanceLarge" 
+				android:text="Player Two" android:singleLine="true" android:clickable="true" 
+				android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+				android:layout_toRightOf="@+id/textView1" /> <TextView android:id="@+id/textView2" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content" 
+				android:text="Score" android:textAppearance="?android:attr/textAppearanceMedium" 
+				android:layout_toLeftOf="@+id/textView1" android:layout_below="@+id/textView3" 
+				/> <TextView android:id="@+id/textView4" android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" android:text="Score" android:textAppearance="?android:attr/textAppearanceMedium" 
+				android:layout_alignBottom="@+id/textView2" android:layout_toRightOf="@+id/textView1" 
+				/> <TextView android:text="X" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" 
+				android:id="@+id/textView5" android:paddingLeft="5dip" android:layout_width="wrap_content" 
+				android:layout_centerVertical="true" android:layout_alignParentLeft="true" 
+				/> <TextView android:text="X" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" 
+				android:id="@+id/textView5" android:paddingRight="5dip" android:layout_width="wrap_content" 
+				android:layout_centerVertical="true" android:layout_alignParentRight="true" 
+				/> </RelativeLayout>
+            -->
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/judgeBye"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:paddingTop="10sp"
+            android:text="No bye today..."
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1" >
+
+            <View
+                android:id="@+id/stroke"
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="#FF909090" />
+
+            <TextView
+                android:id="@+id/judgeAddPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stroke"
+                android:clickable="true"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="Add Player"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/judgeNextRound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/stroke"
+                android:layout_gravity="left"
+                android:clickable="true"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="Next Round"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/judgeEndTournament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/judgeNextRound"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="End Tournament"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:text="Hint: Each player is clickable"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <CheckBox
+            android:id="@+id/judgeAutoFill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:checked="true"
+            android:text="Auto fill team win points"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+</ScrollView>

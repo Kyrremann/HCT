@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<TextView
+			android:id="@+id/judgeFinishName"
+			android:text="Name of Tournament"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dip" />
+		<TextView
+			android:id="@+id/judgeRoundCount"
+			android:text="Leaderboard"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_gravity="right"
+			android:layout_marginRight="5dip" />
+		<View
+			android:layout_marginTop="5dip"
+			android:layout_marginBottom="10dip"
+			android:layout_height="2dip"
+			android:layout_width="fill_parent"
+			android:background="#FF909090" />
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:id="@+id/scoreboard"
+			android:layout_width="fill_parent"
+			android:orientation="vertical"></LinearLayout>
+		<View
+			android:layout_marginTop="5dip"
+			android:layout_marginBottom="10dip"
+			android:layout_height="2dip"
+			android:layout_width="fill_parent"
+			android:background="#FF909090" />
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/judgeDone"
+			android:clickable="true"
+			android:text="Done"
+			android:paddingRight="10dip"
+			android:paddingLeft="10dip"
+			android:textAppearance="?android:attr/textAppearanceLarge" />
+	</LinearLayout>
+</ScrollView>

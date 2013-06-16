@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="2" >
+
+            <TableRow >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/judgeTournament"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="of tournament"
+                    android:singleLine="true" >
+
+                    <requestFocus >
+                    </requestFocus>
+                </EditText>
+            </TableRow>
+
+            <TableRow >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dip"
+                    android:text="Pairing type"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/judgePairing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/tournament"
+                    android:gravity="right" />
+            </TableRow>
+
+            <TableRow >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="Rounds"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/judgeRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="3"
+                    android:inputType="number" />
+            </TableRow>
+
+            <TableRow android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/judgeStartDuration"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Set duration"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <!--
+     				<EditText
+					android:id="@+id/judgeDuration"
+					android:hint="50"
+					android:layout_weight="1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="number" />
+                -->
+            </TableRow>
+        </TableLayout>
+        <!--
+             <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content"> 
+			<View android:layout_marginTop="10dip" android:layout_marginBottom="10dip" 
+			android:layout_height="2dip" android:background="#FF909090" /> <TableRow> 
+			<TextView android:id="@+id/judgeAdd" android:clickable="true" android:layout_column="1" 
+			android:text="Add Player" android:layout_marginLeft="10dip" android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" 
+			/> <TextView android:id="@+id/judgeBStart" android:clickable="true" android:text="Start" 
+			android:layout_marginRight="10dip" android:layout_gravity="left" android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" 
+			/> </TableRow> </TableLayout>
+        -->
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/stroke"
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="#FF909090" />
+
+            <TextView
+                android:id="@+id/judgeAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stroke"
+                android:clickable="true"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="Add Player"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/judgeBStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/stroke"
+                android:clickable="true"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="Start"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="#FF909090" />
+
+        <TableLayout
+            android:id="@+id/judgeStartTable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!--
+            <TableRow
+				android:id="@+id/playerRow">
+				<EditText
+					android:id="@+id/judgePlayerName"
+					android:focusableInTouchMode="true"
+					android:imeOptions="actionNext"
+					android:imeActionLabel="Next"
+					android:singleLine="true"
+					android:hint="Name"
+					android:layout_weight="1"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" />
+				<EditText
+					android:id="@+id/judgePlayerPoints"
+					android:focusableInTouchMode="true"
+					android:imeOptions="actionNext"
+					android:imeActionLabel="Next"
+					android:singleLine="true"
+					android:hint="Points"
+					android:inputType="number"
+					android:layout_weight="1"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" />
+				<TextView
+					android:id="@+id/judgePlayerDelete"
+					android:focusableInTouchMode="false"
+					android:text="X"
+					android:paddingLeft="10dip"
+					android:paddingRight="10dip"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+			</TableRow>
+            -->
+        </TableLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string
+		name="app_name">HCT BETA</string>
+	<string-array
+		name="tournament">
+		<item>Swiss</item>
+		<item>Single-Elimination</item>
+		<item>Double-Elimination</item>
+		<item>Round Robin</item>
+	</string-array>
+	<string
+		name="help">Hi and welcome to the Heroclix tournament app beta. Just click
+		start and your ready to write down everyone who are participating.
+		Team points, name of tournament, rounds, and players are mandatory.
+		Swiss is only option for now. You can also see old tournament,
+		but only name and date (year month date). Please let me know if you
+		find any bugs or have other inquires (Press menu and click report).
+	</string>
+	<string name="endTournament">Do you really want to end the tournament?\nThis will take you to the leaderboard.</string>
+	<string name="scoreNotSet">You forgot to set score on one or more players</string>
+	<string name="donate">Thank you for considering donating. Press \'okey\' to open your browser and be redirected to Paypal.com.</string>
+	<string name="about">Thanks to my girlfriend for putting up with all the time I\'ve spent on this app, and thanks to Jason Herrick for helping me out!</string>
+</resources>
